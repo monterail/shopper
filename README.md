@@ -17,6 +17,8 @@ For the simplicity of this task we would ask you to focus on `OrdersContoller#cr
 ### Notice
 Currently there is only one spec within the project implemented for `OrdersController#create` action - it's kind of an integration test for this action what means we do not want to fail this test along the refactor process. Please do not modify this spec and feel free to add other specs!
 
+Our workshop will take place on 12th of December from 18:00 to 21:00. Please make sure that you’d be able to participate before sending us the solution. When your solution is ready please send us the link to your repo or a zipped project file to monterail-academy@monterail.com. Deadline: 4th of December 20:00. We'll send you the feedback until Friday 8th of December. Good luck!
+
 ### Setup
 
 To setup app type `bin/setup`
