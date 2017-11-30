@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Special Offers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Discount</th>
+      <th>Date from</th>
+      <th>Date to</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @special_offers.each do |special_offer| %>
+      <tr>
+        <td><%= special_offer.discount %></td>
+        <td><%= special_offer.date_from %></td>
+        <td><%= special_offer.date_to %></td>
+        <td><%= link_to 'Show', special_offer_path(special_offer) %></td>
+        <td><%= link_to 'Edit', edit_special_offer_path(special_offer) %></td>
+        <td><%= link_to 'Destroy', special_offer_path(special_offer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Special Offer', new_special_offer_path %>

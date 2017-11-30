@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, <%= @shop_owner.email %></h1>
+    <p>
+      A new order has been submitted!
+      <%= @payment_status_message %>
+    </p>
+    <p>
+      <%= link_to 'Order', order_path(@order) %>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+class SpecialOffer < ApplicationRecord
+end

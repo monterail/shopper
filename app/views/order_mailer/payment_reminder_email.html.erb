@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, <%= @shop_owner.email %></h1>
+    <p>
+      We would kindly remind you to proceed with payment in following orders:
+    </p>
+    <ul>
+      <% @orders.each do |order| %>
+        <li><%= link_to order.product.full_name, order_path(order) %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
+

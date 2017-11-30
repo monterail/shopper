@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopper</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Log in', new_user_session_path %>
+    <% end %>
+
+    <%= link_to 'Products', products_path %>
+    <% if current_user && !current_user.admin? %>
+      <%= link_to 'My orders', orders_path %>
+      <%= link_to 'My account', user_path(current_user) %>
+    <% end %>
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Users', users_path %>
+      <%= link_to 'Special offers', special_offers_path %>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
